@@ -1,55 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Обмін валют</title>
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Обмін валют</title>
+  <link rel="stylesheet" href="./style.css" />
+  <style>
+    
+  </style>
 </head>
 <body>
-    <div class="container">
-        <!--flags-->
-        <div>
-            <div>
-                <img src="./img/UA.png">
-                <p class="state">UAH</p>
-            </div>
-            <div>
-                <img src="./img/US.png">
-                <p class="state">USD</p>
-            </div>
-            <div>
-                <img src="./img/EU.png">
-                <p class="state">EUR</p>
-            </div>
-        </div>
-
-        <!--обмін-->
-        <form class="form">
-            <label class="form-label" for="suma">Сума</label>
-            <input class="form-input" type="text" name="suma">
-
-            <button class="btn" type="button">
-                <img src="./img/arrow.png">
-            </button>
-
-            <label class="form-label" for="konvert">Конвертувати</label>
-            <input class="form-input" type="text" name="konvert">
-        </form>
+  <div class="container">
+    <!-- flags -->
+    <div id="flags">
+      <div data-currency="UAH" class="selected">
+        <img src="./img/UA.png" />
+        <p class="state">UAH</p>
+      </div>
+      <div data-currency="USD">
+        <img src="./img/US.png" />
+        <p class="state">USD</p>
+      </div>
+      <div data-currency="EUR">
+        <img src="./img/EU.png" />
+        <p class="state">EUR</p>
+      </div>
     </div>
-    <!--info-->
-    <div>
-        <p class="title">Всі курс валют</p>
-        <div class="money">
-            <p class="money-text">USD 1</p>
-            <img src="./img/arrow-right.png">
-            <p class="money-text">UAH 41.3</p>
-        </div>
-        <div class="money" style="border-bottom: 1px solid black; margin-bottom: 40px;">
-            <p class="money-text">EUR 1</p>
-            <img src="./img/arrow-right.png">
-            <p class="money-text">UAH 46.9</p>
-        </div>
+
+    <!-- обмін -->
+    <form class="form" onsubmit="return false;">
+      <label class="form-label" for="suma">Сума</label>
+      <input class="form-input" type="text" name="suma" id="suma" />
+
+      <button class="btn" type="button" id="convertBtn">
+        <img src="./img/arrow.png" />
+      </button>
+
+      <label class="form-label" for="konvert">Конвертувати</label>
+      <input class="form-input" type="text" name="konvert" id="konvert" readonly />
+    </form>
+  </div>
+
+  <!-- info -->
+  <div>
+    <p class="title">Всі курс валют</p>
+    <div class="money">
+      <p class="money-text">USD 1</p>
+      <img src="./img/arrow-right.png" />
+      <p class="money-text">UAH 41.3</p>
     </div>
+    <div class="money" style="border-bottom: 1px solid black; margin-bottom: 40px;">
+      <p class="money-text">EUR 1</p>
+      <img src="./img/arrow-right.png" />
+      <p class="money-text">UAH 46.9</p>
+    </div>
+  </div>
+
+    <script src="./script.js"></script>
 </body>
 </html>
